@@ -1,2 +1,2 @@
 # cmdcalc
-Updated version of (CLI-Calc)[https://github.com/mattqze/cli-calc]
+Updated version of [CLI-Calc](https://github.com/mattqze/cli-calc)
