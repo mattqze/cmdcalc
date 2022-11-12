@@ -12,6 +12,11 @@ namespace ConsoleApp16
     {
         static void Main(string[] args)
         {
+            if (args[0] == "help")
+            {
+                Console.WriteLine("Usage:\n\tnumber + number\n\tnumber - number\n\tnumber x number\n\tnumber / number\n\tsqrt number\n\t-sqrt number\n\tnumber %o number\nNote:\n\tIf you would like to complain\n\tabout having only 2 numbers,\n\tplease make your own calculator by hand instead. =)\n");
+                return;
+            }
             //Define variables for argument 0 operations.
             double answer = 0;
             string first1 = null;
@@ -24,16 +29,24 @@ namespace ConsoleApp16
             }
             catch(System.IndexOutOfRangeException)
             {
-                Console.Write("Error: Missed spaces inbetween numbers and operation.");
+                Console.Write("Error: Missing/Misplaced Number and Operation");
                 return;
             }
-
             if (args[0] == "sqrt")
             {
                 //Calculate Square Root of first argument.
                 answer = Math.Sqrt(int.Parse(args[1]));
                 //Display answer.
                 Console.Write(answer);
+                //End.
+                return;
+            }
+            if (args[0] == "-sqrt")
+            {
+                //Calculate Square Root of first argument.
+                answer = Math.Sqrt(int.Parse(args[1]));
+                //Display answer.
+                Console.Write("-"+answer);
                 //End.
                 return;
             }
